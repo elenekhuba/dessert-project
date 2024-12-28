@@ -1,12 +1,18 @@
 import React from "react";
 
-const DessertCard = ({ name, category, price, image }) => {
+const DessertCard = ({ dessert, addToCart }) => {
+  const { images, name, price, category } = dessert;
+
   return (
-    <div style={{ border: "1px solid #ccc", padding: "10px", margin: "10px" }}>
-      <img src={image} alt={name} style={{ width: "100px", height: "100px" }} />
+    <div className="dessert-card">
+      <img
+        src={`https://res.cloudinary.com/dc2c49xov/desserts/${images.thumbnail}`}
+        alt={name}
+      />
       <h3>{name}</h3>
-      <p>Category: {category}</p>
-      <p>Price: ${price.toFixed(2)}</p>
+      <p>{category}</p>
+      <p>${price.toFixed(2)}</p>
+      <button onClick={() => addToCart(dessert)}>Add to Cart</button>
     </div>
   );
 };
