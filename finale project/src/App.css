@@ -76,8 +76,72 @@ body {
 
 .dessert-card button:hover {
   color: hsl(14, 86%, 50%);
+  border:solid 1px  hsl(14, 86%, 50%);
 }
 
+
+
+
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px; 
+  position: relative;
+}
+
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(14, 86%, 42%); 
+  border-radius: 50px; 
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  gap: 10px; 
+  min-width: 100px;
+  width: fit-content;
+}
+
+
+.quantity-controls button {
+  background-color: hsl(14, 86%, 42%);
+  border: none;
+  color:  var(--rose-100);
+  border-radius: 50%; 
+  width: 10px; 
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.quantity-controls button:hover {
+  background-color: var(--rose-100) ;
+  color:hsl(14, 86%, 42%) ; 
+}
+
+
+.quantity-controls span {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  color: white;
+
+}
+
+
+
+.dessert-card.clicked {
+  border: 2px solid red;  
+  padding: 10px;  
+}
 
 
 
@@ -101,7 +165,7 @@ body {
   justify-content: space-between;
   margin-bottom: 10px;
   border-bottom: solid 1px rgba(0, 0, 0, 0.585);
-  border-radius: 0px;
+  
 }
 
 .cart-item p {
@@ -135,7 +199,7 @@ body {
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
   margin-top: 20px;
@@ -144,7 +208,7 @@ body {
 }
 
 .cart button:hover {
-  background: hsl(159, 69%, 45%);
+  background: hsl(14, 87%, 33%);
 }
 
 .cart-item {
